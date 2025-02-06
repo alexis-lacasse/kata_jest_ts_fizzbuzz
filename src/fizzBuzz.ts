@@ -18,13 +18,14 @@ export class FizzBuzz {
 }
 
 function isFizz(arg0: number) {
-    return arg0 % 3 === 0;
+    return arg0 % 3 === 0 || arg0.toString().includes("3");
 }
 
 function isBuzz(arg0: number) {
-    return arg0 % 5 === 0;
+    return arg0 % 5 === 0 || arg0.toString().includes("5");
 }
 
 function isFizzBuzz(arg0: number) {
-    return arg0 % 3 === 0 && arg0 % 5 === 0;
+    return (arg0 % 3 === 0 && arg0 % 5 === 0) || 
+           (arg0.toString().includes("3") && arg0.toString().includes("5"));
 }
